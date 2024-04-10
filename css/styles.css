@@ -8,7 +8,7 @@ html {
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
 }
 
 .icons {
@@ -64,7 +64,7 @@ header {
     margin-bottom: 10px;
     border: none;
     font-size: 12px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     background-color: #fff;
     background-image: url("../img/search.png");
     background-repeat: no-repeat;
@@ -79,7 +79,7 @@ header {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-end;
-    font-family: 'Pacifico';
+    font-family: "Pacifico";
     color: #f1947e;
 }
 
@@ -124,7 +124,7 @@ header {
     background-color: #f1947e;
     width: 100%;
     font-size: 15px;
-    font-family: 'Pacifico';
+    font-family: "Pacifico";
 }
 
 .usps ul {
@@ -140,29 +140,64 @@ header {
 .usps li:not(:last-child):after {
     content: "|";
     padding: 10px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: 700;
 }
 
-.topnav ul {
+.topnav {
     overflow: hidden;
+    font-size: 15px;
     background-color: #334756;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+}
+
+.topnav a {
+    padding: 14px 16px;
+}
+
+.topnav .dropdown {
+    overflow: hidden;
+}
+
+.topnav .dropdown_button {
+    background-color: #334756;
+    color: #f1947e;
+    padding: 14px 16px;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.topnav a:hover, .dropdown:hover .dropdown_button {
+    text-decoration: underline;
+}
+
+.topnav .dropdown_content {
+    display: none;
+    position: absolute;
+    background-color: #eedc82;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
     font-size: 15px;
 }
 
-.topnav li a {
-    display: block;
-    color: #eedc82;
-    text-align: center;
-    padding: 14px 16px;
+.topnav .dropdown_content a {
+    color: black;
+    padding: 12px 16px;
     text-decoration: none;
+    display: block;
+    text-align: left;
 }
 
-.topnav li a:hover {
+.topnav .dropdown_content a:hover {
     text-decoration: underline;
+}
+
+.topnav .dropdown:hover .dropdown_content {
+    display: block;
 }
 
 main {
