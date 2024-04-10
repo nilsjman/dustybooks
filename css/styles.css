@@ -170,11 +170,22 @@ header {
     cursor: pointer;
 }
 
-.dropdown:hover .dropdown_button, .dropdown .dropdown_content a:hover, .dropdown_item:hover {
+.topnav .dropdown:hover .dropdown_button, .dropdown .dropdown_content a:hover, .dropdown_item:hover {
     text-decoration: underline;
 }
 
-.dropdown:hover .dropdown_content, .dropdown_item:hover .dropdown_submenu {
+.topnav .dropdown_item:hover:has(.dropdown_submenu) {
+    background-color: #f1947e;
+}
+
+.topnav .dropdown_item:has(.dropdown_submenu) {
+    background-image: url("../img/chevron.png");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 20px 20px;
+}
+
+.topnav .dropdown:hover .dropdown_content, .dropdown_item:hover .dropdown_submenu {
     display: block;
 }
 
