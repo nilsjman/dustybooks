@@ -246,9 +246,9 @@ main {
 
 .main_recommendation {
     float: left;
-    width: 205px;
+    width: 300px;
     height: max-content;
-    padding: 10px;
+    padding: 25px;
     text-align: center;
 }
 
@@ -258,8 +258,13 @@ main {
 }
 
 .main_news {
-    margin-left: 226px;
-    padding: 10px;
+    margin-left: 351px;
+    padding: 30px;
+}
+
+article {
+    text-align: justify;
+    hyphens: auto;
 }
 
 footer {
