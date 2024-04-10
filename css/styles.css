@@ -170,8 +170,12 @@ header {
     cursor: pointer;
 }
 
-.topnav a:hover, .dropdown:hover .dropdown_button {
+.dropdown:hover .dropdown_button, .dropdown .dropdown_content a:hover, .dropdown_item:hover {
     text-decoration: underline;
+}
+
+.dropdown:hover .dropdown_content, .dropdown_item:hover .dropdown_submenu {
+    display: block;
 }
 
 .topnav .dropdown_content {
@@ -182,6 +186,7 @@ header {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     font-size: 15px;
+    cursor: pointer;
 }
 
 .topnav .dropdown_content a {
@@ -192,11 +197,27 @@ header {
     text-align: left;
 }
 
-.topnav .dropdown_content a:hover {
-    text-decoration: underline;
+.topnav .dropdown_submenu {
+    display: none;
+    position: absolute;
+    left: 160px;
+    top: 0px;
+    min-width: 160px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    cursor: pointer;
 }
 
-.topnav .dropdown:hover .dropdown_content {
+.topnav .dropdown_content .dropdown_item {
+    color: black;
+    padding: 12px 16px;
+    display: block;
+    text-align: left;
+}
+
+.topnav .menu_chevron {
+    float: right;
+    margin: -2px 0 0 0;
     display: block;
 }
 
