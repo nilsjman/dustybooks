@@ -218,6 +218,7 @@ header {
     font-size: 15px;
     border: none;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .topnav .dropdown:hover .dropdown_button, .dropdown .dropdown_content a:hover, .dropdown_item:hover {
