@@ -3,7 +3,14 @@
 }
 
 [class*="col-"] {
-    width: 100%;
+    float: left;
+    padding: 15px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
 @media only screen and (min-width: 768px) {
@@ -57,12 +64,6 @@
         display: inline-block;
     }
 }
-
-/*.row::after {
-    content: "";
-    clear: both;
-    display: table;
-}*/
 
 body {
     color: #000;
@@ -174,7 +175,8 @@ header {
     width: 280px;
 }
 
-.hero_center input {
+.hero_center input,
+.community_search input {
     width: 280px;
     padding: 6px;
     margin-bottom: 10px;
@@ -358,7 +360,6 @@ main {
     background-color: rgba(238 220 130 / 50%);
     padding: 20px;
     min-height: 100vh;
-    display: grid;
 }
 
 .community_banner {
@@ -372,13 +373,10 @@ main {
     font-size: 24px;
 }
 
-.topics_grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
-    padding: 20px;
-}
 .card {
+    width: 200px;
+    height: 100px;
+    margin: 20px;
     background-color: rgba(241 148 126 / 50%);
     border-radius: 10px;
     border: solid #334756;
@@ -387,8 +385,12 @@ main {
     text-align: center;
 }
 
+.card h2,
+.card p {
+    margin: 0;
+}
+
 .community_activities {
-    grid-column: span 2;
     margin-top: 20px;
 }
 
@@ -437,13 +439,7 @@ footer {
 }
 
 
-.container {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-template-rows: auto;
-    gap: 20px;
-    padding: 20px;
-}
+
 
 .banner {
     grid-column: span 2;
@@ -480,18 +476,3 @@ footer {
     margin-top: 20px;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-}
-
-th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-}
-
-th {
-    background-color: #f2f2f2;
-}
