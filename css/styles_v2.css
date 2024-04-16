@@ -91,12 +91,6 @@ ul {
     padding: 0;
 }
 
-h1, 
-h2, 
-h3 {
-    font-family: "Playfair Display", serif;
-}
-
 h1 {
     font-size: 20px;
 }
@@ -159,10 +153,6 @@ header {
     align-items: flex-start;
 }
 
-.hero_left {
-    background-color: azure;
-}
-
 .logo { 
     width: 150px;
 }
@@ -199,7 +189,6 @@ header {
 }
 
 .hero_right {
-    background-color: #eedc82;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -368,7 +357,56 @@ header {
 main {
     background-color: rgba(238 220 130 / 50%);
     padding: 20px;
-    height: 895px;
+    min-height: 100vh;
+    display: grid;
+}
+
+.community_banner {
+    background-color: rgba(241 148 126 / 50%);
+    padding: 50px;
+    text-align: left;
+}
+
+.banner_hl {
+    font-family: "Pacifico";
+    font-size: 24px;
+}
+
+.topics_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+.card {
+    background-color: rgba(241 148 126 / 50%);
+    border-radius: 10px;
+    border: solid #334756;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.community_activities {
+    grid-column: span 2;
+    margin-top: 20px;
+}
+
+.community_activities table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.community_activities th, 
+.community_activities td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.community_activities th {
+    background-color: #f2f2f2;
 }
 
 footer {
@@ -396,4 +434,64 @@ footer {
 
 .copyright {
     float: right;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+    padding: 20px;
+}
+
+.banner {
+    grid-column: span 2;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.topics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.topic-card {
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.discussion-button {
+    grid-column: 2 / span 2;
+    justify-self: end;
+    margin-top: 10px;
+}
+
+.announcements {
+    grid-column: 2 / span 2;
+    margin-top: 20px;
+}
+
+.activities {
+    grid-column: span 2;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
 }
