@@ -30,30 +30,42 @@
 
 @media only screen and (max-width: 768px) {
     .herobanner {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: column-reverse;
     }
 
-    .hero_left .logo {
-        width: 70px;
+    .hero_left {
+        display: none;
+    }
+    
+    .herobanner .hero_center {
+        align-self: center;
     }
 
     .hero_center .slideshow {
         display: none;
     }
 
-    .hero_right .account_currency_wrapper {
-        justify-content: center;
+    .herobanner .hero_right {
+        flex-direction: row;
+        align-self: center;
     }
-
-    .hero_right .shoppingcart_wishlist_wrapper {
-        justify-content: center;
-    }
-
-
 
     .usps {
         display: none;
+    }
+
+    .community_grid {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .community_grid .community_banner {
+        padding: 10px;
+    }
+
+    .community_announcements {
+        max-width: 440px;
     }
     
     .footer_wrapper {
@@ -178,7 +190,7 @@ header {
 .hero_center input,
 .community_search input {
     width: 280px;
-    padding: 6px;
+    padding: 10px;
     margin-bottom: 10px;
     border: none;
     font-size: 12px;
@@ -274,10 +286,11 @@ header {
     padding: 14px 16px;
 }
 
-.topnav .dropdown_button {
+.topnav .dropdown_button, 
+.start_button {
     background-color: #334756;
     color: #f1947e;
-    padding: 14px 16px;
+    padding: 14px 20px;
     font-size: 15px;
     border: none;
     cursor: pointer;
@@ -286,7 +299,8 @@ header {
 
 .topnav .dropdown:hover .dropdown_button, 
 .dropdown .dropdown_content a:hover, 
-.dropdown_item:hover {
+.dropdown_item:hover,
+.start_button:hover {
     text-decoration: underline;
 }
 
@@ -363,6 +377,7 @@ main {
 }
 
 .community_banner {
+    width: 100%;
     background-color: rgba(241 148 126 / 50%);
     padding: 50px;
     text-align: left;
@@ -373,21 +388,51 @@ main {
     font-size: 24px;
 }
 
+.topics_grid {
+    margin: -10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.topics_grid a {
+    color: inherit;
+}
+
 .card {
-    width: 200px;
-    height: 100px;
-    margin: 20px;
+    width: 210px;
+    height: 120px;
+    margin: 10px;
     background-color: rgba(241 148 126 / 50%);
     border-radius: 10px;
     border: solid #334756;
-    padding: 15px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card:hover {
+    background-color: #f1947e;
 }
 
 .card h2,
 .card p {
     margin: 0;
+}
+
+.community_search input{
+    width: 100%;
+    min-width: 165px;
+}
+
+.community_announcements li {
+    margin: 10px 0;
+}
+
+.community_announcements li a {
+    color: inherit;
 }
 
 .community_activities {
@@ -437,42 +482,3 @@ footer {
 .copyright {
     float: right;
 }
-
-
-
-
-.banner {
-    grid-column: span 2;
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-}
-
-.topics {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.topic-card {
-    background-color: #f4f4f4;
-    padding: 20px;
-}
-
-.discussion-button {
-    grid-column: 2 / span 2;
-    justify-self: end;
-    margin-top: 10px;
-}
-
-.announcements {
-    grid-column: 2 / span 2;
-    margin-top: 20px;
-}
-
-.activities {
-    grid-column: span 2;
-    margin-top: 20px;
-}
-
