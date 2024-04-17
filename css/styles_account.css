@@ -368,7 +368,7 @@ main {
 .account_banner {
     width: 100%;
     background-color: #334756;
-    margin: 0 0;
+    margin-top: 0;
     padding: 50px;
     border: 2px #f1947e;
     border-style: solid none;
@@ -392,9 +392,11 @@ select {
 }
 
 .personal_details,
-.security_details {
+.security_details,
+.faqs {
     max-width: 500px;
     width: 50%;
+    margin: 15px 0;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -407,15 +409,49 @@ select {
     box-shadow: 0px 8px 16px 0px rgba(0 0 0 / 20%);
 }
 
+.form_container input[type=submit] {
+    width: 100%;
+    margin-top: 10px ;
+    padding: 10px;
+    background-color: #334756;
+    color: #f1947e;
+}
+
 .password_message {
     display: none;
     position: relative;
-    padding: 20px;
-    margin-top: 10px;
+    padding: 0 20px;
 }
 
-input[type=password]:focus .password_message {
+.password_message p {
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0 0;
+    padding: 0 0;
+}
+
+.password_message ul {
+    margin: 0;
+    list-style: none;
+    font-size: 14px;
+}
+
+input[type=password]:focus + .password_message {
     display: block;
+}
+
+.faq_container {
+    width: 100%;
+    background-color: #eedc82;
+    padding: 20px;
+}
+
+.faq_container details {
+    margin: 20px 0;
+}
+
+.faq_container details > p {
+    margin-left: 15px;
 }
 
 footer {

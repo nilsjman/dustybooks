@@ -146,13 +146,13 @@
                     <div class="pd_form form_container">
                         <form>
                             <label for="name">Name</label>
-                            <input type="text" id="fname" name="name" placeholder="Your name">
+                            <input type="text" id="fname" name="name" placeholder="Your name" required>
 
-                            <label for="mobile">Mobile number</label>
-                            <input type="tel" id="mobile" name="mobile" placeholder="Your mobile number">
+                            <label for="mobile">Mobile number (Optional)</label>
+                            <input type="tel" id="mobile" name="mobile" pattern="^\+[1-9]{1}[0-9]{3,14}$" placeholder="Your mobile number">
                         
                             <label for="country">Country</label>
-                            <select id="country" name="country">
+                            <select id="country" name="country" required>
                                 <option value="">Select your country</option>
                                 <!-- HTML Country Select Dropdown List - https://gist.github.com/danrovito/977bcb97c9c2dfd3398a -->
                                 <option value="Afghanistan">Afghanistan</option>
@@ -417,15 +417,39 @@
                             title="Your password must contain at least one number and one uppercase and lowercase letter, and at least 16 or more characters">
                             
                             <div class="password_message">
-                                <h3>Your password must contain the following:</h3>
-                                <p>A lowercase letter</p>
-                                <p>A capital (uppercase) letter</p>
-                                <p>A number</p>
-                                <p>Minimum 16 characters</p>
+                                <p>Your password must contain the following:</p>
+                                <ul>
+                                    <li>At least one lowercase letter</li>
+                                    <li>At least one capital letter</li>
+                                    <li>At least one number</li>
+                                    <li>Minimum 16 characters</li>
+                                </ul>
                             </div>
 
                             <input type="submit" value="Submit">
                         </form>
+                    </div>
+                </div>
+                <div class="faqs">
+                    <h2>FAQ</h2>
+                    <div class="faq_container">
+                        <details>
+                            <summary>How do I reset my password?</summary>
+                            <p>You can create a new password at any time:</p>
+                            <ol>
+                                <li>Click the <b>Reset password</b> button.</li>
+                                <li>Click <b>Send email</b> below the email address shown.</li>
+                                <li>Check your inbox for an email from us and click the link to reset your password within 3 hours. (Can't see the email? Try checking your junk or spam folder.)</li>
+                            </ol>
+                        </details>
+                        <details>
+                            <summary>How do I change my name?</summary>
+                            <p>Sorry, you can't change your name on your account online – you'll need to <a href="mailto:mail@dustybooks.com" title="Send us an email">get in touch</a> so we can sort that out for you.</p>
+                        </details>
+                        <details>
+                            <summary>How do I remove my mobile number?</summary>
+                            <p>You can change the mobile number that's saved in My Account here, but you can't delete it. To do that, you'll need to <a href="mailto:mail@dustybooks.com" title="Send us an email">get in touch</a>, and we can remove it for you.</p>
+                        </details>
                     </div>
                 </div>
             </div>
