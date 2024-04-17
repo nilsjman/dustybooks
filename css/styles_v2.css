@@ -54,6 +54,10 @@
         display: none;
     }
 
+    .topnav {
+        flex-wrap: wrap;
+    }
+
     .community_grid {
         display: flex;
         justify-content: center;
@@ -62,6 +66,12 @@
 
     .community_grid .community_banner {
         padding: 10px;
+    }
+
+    .topic_start,
+    .community_search,
+    .community_announcements {
+        padding-left: 0;
     }
 
     .community_announcements {
@@ -421,9 +431,7 @@ main {
 }
 
 .topic_start {
-    height: 45px;
     text-align: center;
-    padding: 0 0;
 }
 
 .start_button {
@@ -453,27 +461,6 @@ main {
 
 .community_announcements li a {
     color: inherit;
-}
-
-.community_activities {
-    margin-top: 20px;
-}
-
-.community_activities table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-}
-
-.community_activities th, 
-.community_activities td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-}
-
-.community_activities th {
-    background-color: #f2f2f2;
 }
 
 footer {
