@@ -381,7 +381,7 @@ main {
 }
 
 .account_container input:not([type=submit]),
-select {
+.account_container select {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
