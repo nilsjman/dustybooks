@@ -181,6 +181,7 @@ header {
 .hero_center .slideshow {
     width: 280px;
     background-color: #334756;
+    margin-bottom: 10px;
 }
   
 .hero_center .slideshow img {
