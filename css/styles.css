@@ -404,6 +404,10 @@ footer {
     color: #eedc82;
 }
 
+.footer_wrapper a:hover {
+    text-decoration: underline;
+}
+
 .copyright {
     float: right;
 }
