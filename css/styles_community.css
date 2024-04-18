@@ -46,8 +46,17 @@
     }
 
     .herobanner .hero_right {
-        flex-direction: row;
         align-self: center;
+        flex-wrap: wrap;  
+    }
+
+    .hero_right .account_currency_wrapper {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero_right .shoppingcart_wishlist_wrapper {
+        justify-content: center;
     }
 
     .usps {
